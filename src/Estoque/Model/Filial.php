@@ -10,6 +10,11 @@ class Filial
     }
 
 
+    public function getCodigo()
+    {
+        return $this->codigo;
+    }
+
 
 
 }

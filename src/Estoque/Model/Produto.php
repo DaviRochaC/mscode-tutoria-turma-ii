@@ -9,6 +9,11 @@ class Produto
     {
     }
 
+    public function getCodigo()
+    {
+        return $this->codigo;
+    }
+
  
 
    
