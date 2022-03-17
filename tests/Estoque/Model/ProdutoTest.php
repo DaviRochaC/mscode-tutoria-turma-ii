@@ -15,9 +15,7 @@ class ProdutoTest extends TestCase{
     
     public function testRetornoDoCodigoDoProduto()
     {
-
        $produto = new Produto(700,'monitor samsung','preto');
        $this->assertEquals(700,$produto->getCodigo());
-       
     }
 }

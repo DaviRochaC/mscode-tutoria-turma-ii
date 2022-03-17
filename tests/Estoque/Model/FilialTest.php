@@ -16,9 +16,7 @@ class FilialTest extends TestCase{
 
     public function testRetornoDoCodigoDaFilial()
     {
-
        $filial = new Filial(003,'Loja de Sao Mateus');
        $this->assertEquals(003,$filial->getCodigo());
-       
     }
 }

@@ -9,7 +9,11 @@ class Produto
     {
     }
 
-    public function getCodigo()
+    /**
+     * Função que retorna o código do produto.
+     * @return int
+     */
+    public function getCodigo():int
     {
         return $this->codigo;
     }

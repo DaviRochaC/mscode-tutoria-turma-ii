@@ -10,7 +10,11 @@ class Filial
     }
 
 
-    public function getCodigo()
+     /**
+     * Função que retorna o código da Filial.
+     * @return int
+     */
+    public function getCodigo():int
     {
         return $this->codigo;
     }
