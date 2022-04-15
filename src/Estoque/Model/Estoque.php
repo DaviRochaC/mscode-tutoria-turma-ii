@@ -31,10 +31,11 @@ class Estoque
 
         if ($this->buscaProdutoExisteEmEstoque($produto->getCodigo())) {
             $this->produtos[$produto->getCodigo()] += $quantidadeEntrada;
-        } else {
+            return;
+        } 
             $this->adicionarProdutoAoEstoque($produto->getCodigo(), $quantidadeEntrada);
             $this->reservas[$produto->getCodigo()] = [0];
-        }
+    
     }
 
     /**
@@ -165,10 +166,7 @@ class Estoque
      */
     public function buscaProdutoExisteEmEstoque(mixed $codigoProduto): bool
     {
-        if (!array_key_exists($codigoProduto, $this->produtos)) {
-            return false;
-        }
-        return true;
+        return array_key_exists($codigoProduto, $this->produtos);
     }
 
     /**
