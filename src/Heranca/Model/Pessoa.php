@@ -3,7 +3,7 @@
 namespace MSCode\TutoriaTurmaII\Heranca\Model;
 
 use \Exception;
-class Pessoa
+abstract class Pessoa 
 {
 
     public function __construct(protected string $nome,private CPF $cpf)
