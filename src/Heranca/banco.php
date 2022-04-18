@@ -1,7 +1,6 @@
 <?php
 
 require_once('../../vendor/autoload.php');
-
 use MSCode\TutoriaTurmaII\Heranca\Model\{CPF};
 use MSCode\TutoriaTurmaII\Heranca\Model\Conta\{Conta,ContaPoupanca};
 use MSCode\TutoriaTurmaII\Heranca\Model\Funcionario\{Diretor,Gerente};

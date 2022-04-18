@@ -3,7 +3,7 @@
 namespace MSCode\TutoriaTurmaII\Heranca\Model;
 
 
-class CPF
+final class CPF
 {
     public function __construct(private string $numero)
     {

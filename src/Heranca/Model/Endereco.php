@@ -9,7 +9,9 @@ class Endereco
     {
     }
 
-    
 
-
+    public function __set(string $nomeAtributo, string $valor)
+    {
+        $this->$nomeAtributo = $valor;
+    }
 }

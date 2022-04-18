@@ -2,7 +2,9 @@
 
 namespace MSCode\TutoriaTurmaII\Heranca\Model\Funcionario;
 
-class Diretor extends Funcionario
+use MSCode\TutoriaTurmaII\Heranca\Model\Autenticavel;
+
+class Diretor extends Funcionario implements Autenticavel
 {
 
     public function calculaBonificacao(): float
