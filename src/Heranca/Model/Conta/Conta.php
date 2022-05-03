@@ -2,6 +2,7 @@
 
 namespace MSCode\TutoriaTurmaII\Heranca\Model\Conta;
 
+
 abstract class Conta
 {
     protected int $saldo;
@@ -27,7 +28,7 @@ abstract class Conta
         $valorSaque  = $valorASacar + $tarifaSaque;
 
         if ($valorSaque > $this->saldo) {
-            echo "Saldo indisponível";
+            throw new SaldoInsuficienteException($valorSaque,$this->saldo);
             return;
         }
         $this->saldo -= $valorSaque;
@@ -36,7 +37,7 @@ abstract class Conta
     public function deposita(float $valorADepositar): void
     {
         if ($valorADepositar < 0) {
-            echo "Valor precisa ser positivo";
+            throw new \InvalidArgumentException('Valor precisa ser positivo');
             return;
         }
 

@@ -2,7 +2,6 @@
 
 namespace MSCode\TutoriaTurmaII\Heranca\Model;
 
-use \Exception;
 abstract class Pessoa 
 {
 
@@ -24,7 +23,7 @@ abstract class Pessoa
     protected function validaNome(string $nome)
     {
         if (strlen($nome) < 5) {
-            return throw new Exception('Nome precisa ter pelo menos 5 caracteres', 403);
+            throw new \InvalidArgumentException('O atributo nome precisa ter pelo menos 5 caracteres');
             exit();
         }
     }

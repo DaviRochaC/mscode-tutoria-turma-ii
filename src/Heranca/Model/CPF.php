@@ -2,6 +2,7 @@
 
 namespace MSCode\TutoriaTurmaII\Heranca\Model;
 
+use MSCode\TutoriaTurmaII\Heranca\Model\Conta\CpfInvalidoException;
 
 final class CPF
 {
@@ -14,7 +15,7 @@ final class CPF
         ]);
 
         if ($numero === false) {
-            echo "Cpf inválido";
+            throw new CpfInvalidoException($numero);
             exit();
         }
         $this->numero = $numero;
